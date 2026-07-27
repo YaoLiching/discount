@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>優惠公告｜iDream廚房</title>
+<style>
+:root{
+  --ink:#3a1f0d;
+  --paper:#fff6e4;
+  --paper-2:#ffe9bd;
+  --flag-red:#c0311a;
+  --flag-red-deep:#8f2011;
+  --gold:#e8a325;
+  --gold-deep:#c67e14;
+  --green-1:#4c7a44;
+  --green-2:#2f5a2a;
+  --line:rgba(58,31,13,0.14);
+  --shadow: 0 18px 40px rgba(120,60,10,0.16);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  font-family: "PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(232,163,37,0.25), transparent 42%),
+    radial-gradient(circle at 92% 18%, rgba(192,49,26,0.14), transparent 40%),
+    var(--paper);
+  min-height:100vh;
+  padding-bottom:64px;
+}
+/* ===== top banner ===== */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:linear-gradient(180deg, var(--flag-red) 0%, var(--flag-red-deep) 100%);
+  color:#fff8ec;
+  padding:14px 18px 12px;
+  box-shadow:0 6px 18px rgba(120,20,10,0.25);
+}
+.topbar-inner{
+  max-width:640px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.back-link{
+  color:#ffe4c4;
+  text-decoration:none;
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:4px;
+  flex-shrink:0;
+  opacity:0.9;
+}
+.back-link:active{opacity:0.6;}
+.topbar-title{
+  font-size:19px;
+  font-weight:900;
+  letter-spacing:2px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.topbar-title .bell{font-size:18px;}
+/* ===== masthead ===== */
+.masthead{
+  max-width:640px;
+  margin:26px auto 0;
+  padding:0 18px;
+  text-align:center;
+}
+.date-ribbon{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:linear-gradient(135deg, var(--green-1) 0%, var(--green-2) 100%);
+  color:#fff8ec;
+  font-weight:800;
+  font-size:15px;
+  padding:9px 20px;
+  border-radius:999px;
+  box-shadow:0 8px 18px rgba(47,90,42,0.35);
+  letter-spacing:0.5px;
+}
+.date-ribbon .clock{font-size:16px;}
+.date-ribbon .range{font-weight:900;color:#ffe27a;}
+/* ===== feed ===== */
+.feed{
+  max-width:640px;
+  margin:30px auto 0;
+  padding:0 16px;
+  display:flex;
+  flex-direction:column;
+  gap:26px;
+}
+.card{
+  display:block;
+  position:relative;
+  background:#fffdf7;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid var(--line);
+}
+.card-media{
+  width:100%;
+  display:block;
+}
+.card-cta-wrap{
+  padding:18px 20px 22px;
+  text-align:center;
+}
+.cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+  color:#3a1f0d;
+  font-size:17px;
+  font-weight:900;
+  padding:15px 20px;
+  border-radius:999px;
+  text-decoration:none;
+  box-shadow:0 8px 18px rgba(198,126,20,0.4);
+  letter-spacing:1px;
+  transition:transform 0.15s ease;
+}
+.cta:active{transform:scale(0.97);}
+.cta .arrow{font-size:16px;}
+/* coming soon placeholder card */
+.card.placeholder{
+  background:repeating-linear-gradient(135deg, rgba(232,163,37,0.08), rgba(232,163,37,0.08) 10px, rgba(232,163,37,0.02) 10px, rgba(232,163,37,0.02) 20px);
+  border:1.5px dashed var(--gold-deep);
+  box-shadow:none;
+  padding:38px 20px;
+  text-align:center;
+}
+.card.placeholder .ic-big{font-size:30px;margin-bottom:8px;}
+.card.placeholder p{
+  margin:0;
+  font-size:14px;
+  color:#8a6a44;
+  font-weight:600;
+}
+footer.page-foot{
+  max-width:640px;
+  margin:36px auto 0;
+  padding:0 20px;
+  text-align:center;
+  font-size:12px;
+  color:#a1815c;
+  line-height:1.8;
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="back-link" href="../index.html">‹ 返回</a>
+    <div class="topbar-title"><span class="bell">📢</span>優惠公告</div>
+    <span style="width:40px;flex-shrink:0;"></span>
+  </div>
+</div>
+
+<div class="masthead">
+  <div class="date-ribbon">
+    <span class="clock">⏰</span>
+    本期活動｜<span class="range">即日起～2026 / 8 / 10</span>
+  </div>
+</div>
+
+<div class="feed">
+
+  <!-- Card 1: 黃金鳳梨酥 -->
+  <article class="card">
+    <img class="card-media" src="pineapple-cake.png" alt="購物滿380送黃金鳳梨水果酥活動海報">
+    <div class="card-cta-wrap">
+      <a class="cta" href="https://liff.line.me/2010286983-KluFiWkX" target="_blank" rel="noopener">
+        訂購去 <span class="arrow">→</span>
+      </a>
+    </div>
+  </article>
+
+  <!-- Placeholder for future activities -->
+  <article class="card placeholder">
+    <div class="ic-big">🌱</div>
+    <p>更多優惠活動陸續公布中，敬請期待</p>
+  </article>
+
+</div>
+
+<footer class="page-foot">
+  好放心飲食行銷有限公司｜iDream廚房<br>
+  活動內容與期限請以官方 LINE 最新公告為準
+</footer>
+
+</body>
+</html>
